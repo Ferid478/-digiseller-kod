@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Google Play Kart Kodunuz</title>
+</head>
+<body>
+  <h1>Teşekkür ederiz!</h1>
+  <p>Siparişiniz başarıyla alındı.</p>
+  <p><strong>Kodunuz:</strong> <span id="code"></span></p>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get("uniquecode");
+    document.getElementById("code").textContent = code || "Kod alınamadı.";
+  </script>
+</body>
+</html>
