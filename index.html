@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Kodunuz</title>
+</head>
+<body>
+  <h1>Teşekkür ederiz!</h1>
+  <p>Siparişiniz başarıyla alındı.</p>
+  <p>Kodunuz: <span id="kod">Yükleniyor...</span></p>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const code = urlParams.get('uniquecode');
+    document.getElementById('kod').textContent = code || 'Kod alınamad
